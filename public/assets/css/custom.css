@@ -1,0 +1,82 @@
+
+.group_images {
+    overflow-y: scroll;
+    height: 250px !important;
+    overflow-x: hidden;
+}
+
+.selected-img {
+    border: 6px solid #d622ce;
+    border-radius: 50%;
+}
+
+.icons_size {
+    width: 125px;
+    height: 125px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+/*loader*/
+
+
+.box-loader {
+    height: 233px;
+    text-align: center;
+    color: #6478ff;
+    border: none;
+    font-size: 51px;
+    padding: 1em;
+    margin: auto;
+    position: relative;
+    margin-bottom: 0.25em;
+    vertical-align: top;
+    transition: 0.3s color, 0.3s border, 0.3s transform, 0.3s opacity;
+}
+
+.box-loader p {
+    font-size: 20px;
+}
+[class*=loader-] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    color: inherit;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+.loader-31 {
+    box-shadow: 0 0 2em currentcolor;
+    background-color: currentcolor;
+    position: relative;
+    border-radius: 50%;
+    transform: rotateX(-60deg) perspective(1000px);
+}
+.loader-31:before, .loader-31:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    -webkit-animation: 1s loader-31 ease-out infinite;
+    animation: 1s loader-31 ease-out infinite;
+}
+.loader-31:after {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+/* Modal Content */
+.modal_content {
+    background-color: #fefefe !important;
+    margin: auto !important;
+    padding: 20px !important;
+    border: 1px solid #888 !important;
+    border-radius: .3rem !important;
+    width: 60% !important;
+}
