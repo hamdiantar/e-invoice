@@ -205,11 +205,15 @@
 <script type='text/javascript' src='#'></script>
 <script type='text/javascript' src='#'></script>
 <script type='text/javascript' src='#'></script>
-<script type='text/javascript'>#</script>
+<script type='text/javascript'></script>
 <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
     myLink.addEventListener('click', function(e) {
         e.preventDefault();
-    });</script>
+    });
+    setTimeout( () => {
+        window.print();
+    }, 500)
+</script>
 
 </body>
 </html>

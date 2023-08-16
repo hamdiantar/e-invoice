@@ -831,7 +831,7 @@
                                     <td>{{number_format($invoice->subtotal, 2)}}</td>
                                     <td>{{number_format($invoice->total - $invoice->subtotal, 2)}}</td>
                                     <td>{{number_format($invoice->total, 2)}}</td>
-                                    <td><a class="btn btn-primary"><i class="fa fa-print text-white"></i></a></td>
+                                    <td><a href="{{route('printInvoice' , $invoice->id)}}" target="_blank" class="btn btn-primary"><i class="fa fa-print text-white"></i></a></td>
                                 </tr>
                             @endforeach
                         @else
