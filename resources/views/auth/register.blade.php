@@ -286,8 +286,8 @@
                                 <label for="type">اختر النوع </label>
                                  <select name="type" class="form-control">
                                      <option value="">اختر</option>
-                                     <option value="store">store</option>
-                                     <option value="customer">customer</option>
+                                     <option value="store" {{(request()->role == 'store' || old('type') == 'store') ? 'selected' : ''}}>store</option>
+                                     <option value="customer" {{(request()->role == 'customer' || old('type') == 'customer') ? 'selected' : ''}}>customer</option>
                                  </select>
                                 @error('type')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
@@ -325,6 +325,7 @@
                             <div class="field padding-bottom--24">
                                 <input id="kt_login_signin_submit" type="submit" value="تسجيل">
                             </div>
+                            <a href="{{url('/')}}">رجوع  <i class="fa fa-arrow-right"></i> </a>
                         </form>
                     </div>
                 </div>

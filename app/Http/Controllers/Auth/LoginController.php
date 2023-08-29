@@ -49,7 +49,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         if ($user->type == 'store' || $user->type == 'admin') {
-            return redirect()->to('dashboard');
+            return redirect()->to('/dashboard');
         }
         return redirect()->to('/');
     }

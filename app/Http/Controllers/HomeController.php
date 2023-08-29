@@ -55,7 +55,7 @@ class HomeController extends Controller
                 $q->where('number', $request->q);
             })->get();
         }
-        return view('welcome', compact('invoices'));
+        return view('home', compact('invoices'));
     }
 
     public function getCustomers()
